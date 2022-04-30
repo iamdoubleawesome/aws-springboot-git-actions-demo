@@ -24,3 +24,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Excute Jar File
+      run: sudo kill -9 `sudo lsod -t -i:80`  & sudo java -jar
